@@ -1,0 +1,15 @@
+.left-col{
+    background-color: turquoise;
+    text-align: center;
+}
+
+.right-col{
+    background-color: tomato;
+    text-align: center;
+}
+
+.Footer{
+    background-color: crimson;
+    text-align: center;
+    color: white;
+}

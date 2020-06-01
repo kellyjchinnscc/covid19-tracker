@@ -1,0 +1,17 @@
+.headline{
+    text-align: center;
+    background-color: wheat;
+}
+
+.block{
+    text-align: center;
+    border-radius: 10px;
+    border-style: ridge;
+    min-height: 22vh;
+    min-width: 40vh;
+    max-width: 40vh;
+}
+
+.block h4{
+    font-size: 20px;
+}

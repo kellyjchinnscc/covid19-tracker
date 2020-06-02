@@ -20,6 +20,10 @@ function Leftcolumn({countries, displayNameOnRight}) {
 }
 
 function Rightcolumn({selectedCountryName, selectedCountryData}) {
+   
+    // TEMP
+    let activeCases = selectedCountryData.TotalConfirmed - (selectedCountryData.TotalRecovered + selectedCountryData.TotalDeaths)
+
     // JSX
     return(
             <div className="col-md-7 right-col-countrypicker country-picker">
@@ -43,7 +47,7 @@ function Rightcolumn({selectedCountryName, selectedCountryData}) {
                 <div className="row">
                     <div className="col-md-12">
                         <h4>Total Active Cases: </h4>
-                        <h4>{selectedCountryName !== '' && selectedCountryData.TotalConfirmed - (selectedCountryData.TotalRecovered + selectedCountryData.TotalDeaths)}</h4>
+                        <h4>{!isNaN(activeCases) && activeCases}</h4>
                     </div>
                 </div>     
             </div>

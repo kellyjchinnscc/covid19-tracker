@@ -50,7 +50,7 @@ function App() {
   // Data Manipulation
   // Used to calculate the current active cases, store it in a variable to be converted to a string when being passed in
   const currentActiveCases = globalData.TotalConfirmed - (globalData.TotalRecovered + globalData.TotalDeaths)
-
+  
   // JSX
   return (
     <div className="App">

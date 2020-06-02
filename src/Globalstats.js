@@ -18,7 +18,7 @@ function Statblock({head, globalStats }){
     return(
         <div className="col-auto mr-auto block">
                 <h4>Total {head}:</h4>
-                <h4>{!isNaN(globalStats) && globalStats}</h4>
+                <h4>{!isNaN(globalStats) && globalStats.toLocaleString()}</h4>
         </div>
     )
 }

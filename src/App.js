@@ -25,7 +25,7 @@ function App() {
       setCurrentDate(data.Date)
       setCountryData(data.Countries)
     }catch(err){
-      document.write('Please refresh the page. There was an error in loading the data! These damn remote data sources are so annoying -.-')
+      document.write(`Please refresh the page. If you're seeing this lackluster webpage, it's cuz there was an error in loading the data! These damn remote data sources are so annoying -.-. Just refresh a few times and the REAL page should show up! ^.^`)
     }
   }
   useEffect( () => { // Calling useEffect to use the getData function to make sure the data isn't fetched hundreds of times

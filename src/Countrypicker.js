@@ -1,8 +1,7 @@
 import React from 'react'
 import './countrypicker.css'
 
-// 2 Components
-
+// 2 Components to be exported
 function Leftcolumn({countries, displayNameOnRight}) {
 
     // Javascript Code here
@@ -21,9 +20,6 @@ function Leftcolumn({countries, displayNameOnRight}) {
 }
 
 function Rightcolumn({selectedCountryName, selectedCountryData}) {
-
-    // Javascript Code here
-
     // JSX
     return(
             <div className="col-md-7 right-col-countrypicker country-picker">
@@ -50,18 +46,9 @@ function Rightcolumn({selectedCountryName, selectedCountryData}) {
                         <h4>{selectedCountryName !== '' && selectedCountryData.TotalConfirmed - (selectedCountryData.TotalRecovered + selectedCountryData.TotalDeaths)}</h4>
                     </div>
                 </div>     
-               
-                
             </div>
     )
 }
-
-
-
-
-
-
-
 export default Leftcolumn
 export{
     Leftcolumn,

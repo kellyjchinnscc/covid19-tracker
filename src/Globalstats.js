@@ -1,7 +1,6 @@
 import React from 'react';
 import './globalstats.css'
 // This Component will have not one but TWO stateless component functions!
-
 function Message({date}) {
     return(
         <div className='headline'>
@@ -14,7 +13,6 @@ function Message({date}) {
     )
 }
 
-// TO DO - MUST FIND WAY TO SPACE OUT BLOCKS!
 function Statblock({head, globalStats }){
     
     return(

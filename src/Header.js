@@ -1,9 +1,6 @@
 import React from 'react'
 import './header.footer.styles.css'
 function Header() {
-
-
-
     // JSX
     return (
         <div className="Header">
@@ -19,5 +16,4 @@ function Header() {
         </div>
     )
 }
-
 export default Header

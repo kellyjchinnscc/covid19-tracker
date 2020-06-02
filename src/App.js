@@ -18,16 +18,29 @@ function App() {
 
  // API Fetching
   const getData = async () => {
-    const response = await fetch('https://api.covid19api.com/summary')
-    const data = await response.json()
-    const globalStats = data.Global
-    setGlobalData(globalStats)
-    setCurrentDate(data.Date)
-    setCountryData(data.Countries)
+    try{
+      const response = await fetch('https://api.covid19api.com/summary')
+      const data = await response.json()
+      const globalStats = data.Global
+      setGlobalData(globalStats)
+      setCurrentDate(data.Date)
+      setCountryData(data.Countries)
+    }catch(err){
+      document.write('Please refresh the page. There was an error in loading the data! These damn remote data sources are so annoying -.-')
+    }
+    // const response = await fetch('https://api.covid19api.com/summary')
+    // const data = await response.json()
+    // const globalStats = data.Global
+    // setGlobalData(globalStats)
+    // setCurrentDate(data.Date)
+    // setCountryData(data.Countries)
   }
   useEffect( () => { // Calling useEffect to use the getData function to make sure the data isn't fetched hundreds of times
     getData()
   }, [])
+ 
+
+  
 
 
  // Func Decl and Impl
@@ -47,7 +60,7 @@ function App() {
   // Data Manipulation
   // Used to calculate the current active cases, store it in a variable to be converted to a string when being passed in
   const currentActiveCases = globalData.TotalConfirmed - (globalData.TotalRecovered + globalData.TotalDeaths)
-  console.log(selectedCountryData)
+
  
   // JSX
   return (

@@ -1,0 +1,24 @@
+.country-picker{
+    text-align: center;
+    min-height: 100vh;
+    padding-top: 20px;
+    border-style: ridge;
+    border-radius: 10px;
+}
+
+
+.left-col-countrypicker{
+    background-color: lightgreen;
+}
+
+.right-col-countrypicker{
+    background-color: greenyellow;
+}
+
+.active-cases{
+    border-style: ridge;
+    border-radius: 10px;
+    min-height: 20vh;
+    /* min-width: 40vh;
+    max-width: 40vh */
+}

@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import Header from './Header'
-import Footer from './Footer'
+import {Header, Footer} from './HeaderFooter'
 import {Message, Statblock} from './Globalstats'
 import {Leftcolumn, Rightcolumn} from './Countrypicker'
 import { useState, useEffect } from 'react';
@@ -13,7 +12,10 @@ function App() {
   const[currentDate, setCurrentDate] = useState('');
   const[countryData, setCountryData] = useState([]);
   const[selectedCountryName, setSelectedCountryName] = useState('')
-  const[selectedCountryData, setSelectedCountryData] = useState({})
+  const[selectedCountryData, setSelectedCountryData] = useState()
+  const[selectedCountryConfirmed, setSelectedCountryConfirmed] = useState(0)
+  const[selectedCountryRecovered, setSelectedCountryRecovered] = useState(0)
+  const[selectedCountryDeaths, setSelectedCountryDeaths] = useState(0)
 
  // API Fetching
   const getData = async () => {
@@ -47,6 +49,9 @@ function App() {
       setSelectedCountryData(selectedCountryData)
       let countryBlocks = document.querySelectorAll('.country-block')
       countryBlocks.forEach(block => {block.setAttribute('style', 'display: initial')})
+      setSelectedCountryConfirmed(selectedCountryData.TotalConfirmed)
+      setSelectedCountryRecovered(selectedCountryData.TotalRecovered)
+      setSelectedCountryDeaths(selectedCountryData.TotalDeaths)
   }
 
   // Data Manipulation
@@ -73,7 +78,9 @@ function App() {
           <Leftcolumn countries={countryData} displayNameOnRight={displayCountryNameInRightColumn}/>
           <Rightcolumn 
             selectedCountryName={selectedCountryName}
-            selectedCountryData={selectedCountryData}
+            selectedCountryConfirmed={selectedCountryConfirmed}
+            selectedCountryRecovered={selectedCountryRecovered}
+            selectedCountryDeaths={selectedCountryDeaths}
           />
       </div>
       <Footer/>

@@ -19,21 +19,18 @@ function Leftcolumn({countries, displayNameOnRight}) {
     )
 }
 
-function Rightcolumn({selectedCountryName, selectedCountryData}) {
-   
-    // TEMP
-    let activeCases = selectedCountryData.TotalConfirmed - (selectedCountryData.TotalRecovered + selectedCountryData.TotalDeaths)
+function Rightcolumn({selectedCountryName, selectedCountryConfirmed, selectedCountryRecovered, selectedCountryDeaths}) {
+    let activeCases = selectedCountryConfirmed - (selectedCountryRecovered + selectedCountryDeaths)
 
     // JSX
     return(
             <div className="col-md-7 right-col-countrypicker country-picker">
                 {selectedCountryName !== '' && <h4>Current Stats for {selectedCountryName}</h4>}
-                <br/> 
                     <div className="row">
                         <div className="col-md-4"></div>
                         <div className="col-md-4 block country-block confirmed-cases">
-                            <h4>Total Confirmed Cases:</h4>
-                            <h4>{selectedCountryData.TotalConfirmed}</h4>
+                            <h3>Total Confirmed Cases:</h3>
+                            <h4>{selectedCountryConfirmed.toLocaleString()}</h4>
                         </div>
                         <div className="col-md-4"></div>
                     </div>
@@ -41,8 +38,8 @@ function Rightcolumn({selectedCountryName, selectedCountryData}) {
                     <div className="row">
                         <div className="col-md-4"></div>
                         <div className="col-md-4 block country-block recovered-cases">
-                            <h4>Total Recovered:</h4>
-                            <h4>{selectedCountryData.TotalRecovered}</h4>
+                            <h3>Total Recovered:</h3>
+                            <h4>{selectedCountryRecovered.toLocaleString()}</h4>
                         </div>
                         <div className="col-md-4"></div>
                     </div>
@@ -50,8 +47,8 @@ function Rightcolumn({selectedCountryName, selectedCountryData}) {
                     <div className="row">
                         <div className="col-md-4"></div>
                         <div className="col-md-4 block country-block death-cases">
-                            <h4>Total Deaths:</h4>
-                            <h4>{selectedCountryData.TotalDeaths}</h4>
+                            <h3>Total Deaths:</h3>
+                            <h4>{selectedCountryDeaths.toLocaleString()}</h4>
                         </div>
                         <div className="col-md-4"></div>
                     </div>
@@ -62,7 +59,7 @@ function Rightcolumn({selectedCountryName, selectedCountryData}) {
                         <div className="col-md-4"></div>
                         <div className="col-md-4 block country-block active-cases">
                             <h3>Total Active Cases: </h3>
-                            <h4>{!isNaN(activeCases) && activeCases}</h4>
+                            <h4>{!isNaN(activeCases) && activeCases.toLocaleString()}</h4>
                         </div>
                         <div className="col-md-4"></div>
                     </div>     

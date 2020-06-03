@@ -3,7 +3,6 @@
     min-height: 100vh;
     padding-top: 20px;
     border-style: ridge;
-    /* border-radius: 10px; */
     background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
 }
 .country-block{

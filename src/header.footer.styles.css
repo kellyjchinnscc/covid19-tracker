@@ -1,11 +1,6 @@
-.left-col{
-    background-color: turquoise;
+.Header{
     text-align: center;
-}
-
-.right-col{
-    background-color: tomato;
-    text-align: center;
+    color: rgb(160, 157, 157);
 }
 
 .Footer{

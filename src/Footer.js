@@ -6,13 +6,13 @@ function Footer() {
 
     // JSX
     return (
-        <div className="Footer">
-            <div className="row">
-                <div className="col-12">
+        
+            <div className="row Footer">
+                <div className="col-sm-12">
                     <h1>Kelly Chin | Web Developer | NSCC</h1>
                 </div>
             </div>
-        </div>
+     
     )
 }
 

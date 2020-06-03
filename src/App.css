@@ -10,3 +10,11 @@ body{
   text-align: center;
   background-color: yellow;
 }
+
+.block{
+  text-align: center;
+  border-style: ridge;
+  min-height: 20vh;
+  min-width: 40vh;
+  max-width: 40vh;
+}

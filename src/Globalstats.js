@@ -16,9 +16,9 @@ function Message({date}) {
 function Statblock({head, globalStats }){
     
     return(
-        <div className="col-auto mr-auto block">
-                <h4>Total {head}:</h4>
-                <h4>{!isNaN(globalStats) && globalStats.toLocaleString()}</h4>
+        <div className="col-auto mr-auto block global-block">
+                <h5>Total {head}:</h5>
+                <strong>{!isNaN(globalStats) && globalStats.toLocaleString()}</strong>
         </div>
     )
 }

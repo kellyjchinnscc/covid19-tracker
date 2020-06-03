@@ -27,29 +27,45 @@ function Rightcolumn({selectedCountryName, selectedCountryData}) {
     // JSX
     return(
             <div className="col-md-7 right-col-countrypicker country-picker">
-                {selectedCountryName !== '' && <h3>Current Stats for {selectedCountryName}</h3>}
-                <br/>
-                <div className="row">
-                    <div className="col-md-4 mr-auto block">
-                        <h4>Total Confirmed Cases:</h4>
-                        <h4>{selectedCountryData.TotalConfirmed}</h4>
+                {selectedCountryName !== '' && <h4>Current Stats for {selectedCountryName}</h4>}
+                <br/> 
+                    <div className="row">
+                        <div className="col-md-4"></div>
+                        <div className="col-md-4 block country-block confirmed-cases">
+                            <h4>Total Confirmed Cases:</h4>
+                            <h4>{selectedCountryData.TotalConfirmed}</h4>
+                        </div>
+                        <div className="col-md-4"></div>
                     </div>
-                    <div className="col-md-4 mr-auto block">
-                        <h4>Total Recovered:</h4>
-                        <h4>{selectedCountryData.TotalRecovered}</h4>
+
+                    <div className="row">
+                        <div className="col-md-4"></div>
+                        <div className="col-md-4 block country-block recovered-cases">
+                            <h4>Total Recovered:</h4>
+                            <h4>{selectedCountryData.TotalRecovered}</h4>
+                        </div>
+                        <div className="col-md-4"></div>
                     </div>
-                    <div className="col-md-4 mr-auto block">
-                        <h4>Total Deaths:</h4>
-                        <h4>{selectedCountryData.TotalDeaths}</h4>
+
+                    <div className="row">
+                        <div className="col-md-4"></div>
+                        <div className="col-md-4 block country-block death-cases">
+                            <h4>Total Deaths:</h4>
+                            <h4>{selectedCountryData.TotalDeaths}</h4>
+                        </div>
+                        <div className="col-md-4"></div>
                     </div>
-                </div>
-               <br/> 
-                <div className="row">
-                    <div className="col-md-12">
-                        <h4>Total Active Cases: </h4>
-                        <h4>{!isNaN(activeCases) && activeCases}</h4>
-                    </div>
-                </div>     
+
+                    <br/>
+
+                    <div className="row">
+                        <div className="col-md-4"></div>
+                        <div className="col-md-4 block country-block active-cases">
+                            <h3>Total Active Cases: </h3>
+                            <h4>{!isNaN(activeCases) && activeCases}</h4>
+                        </div>
+                        <div className="col-md-4"></div>
+                    </div>     
             </div>
     )
 }

@@ -45,6 +45,8 @@ function App() {
       })
       let selectedCountryData = selectedCountryDataArr[0]
       setSelectedCountryData(selectedCountryData)
+      let countryBlocks = document.querySelectorAll('.country-block')
+      countryBlocks.forEach(block => {block.setAttribute('style', 'display: initial')})
   }
 
   // Data Manipulation
@@ -54,8 +56,7 @@ function App() {
   // JSX
   return (
     <div className="App">
-      <Header />
-      <br></br>  
+      <Header /> 
       <Message date={currentDate.substring(0, 10)}/>
       <br></br>
       <div className="container">
@@ -67,6 +68,7 @@ function App() {
           </div>      
       </div>
       <br/>
+      
       <div className="row">
           <Leftcolumn countries={countryData} displayNameOnRight={displayCountryNameInRightColumn}/>
           <Rightcolumn 

@@ -8,6 +8,7 @@
     min-height: 20vh;
     min-width: 40vh;
     max-width: 40vh;
+    box-shadow: 5px 5px rgb(54, 52, 52);
 }
 
 .block h4{

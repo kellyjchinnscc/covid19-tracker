@@ -29,7 +29,7 @@ function Rightcolumn({selectedCountryName, selectedCountryConfirmed, selectedCou
                     <div className="row">
                         <div className="col-md-4"></div>
                         <div className="col-md-4 block country-block confirmed-cases">
-                            <h3>Total Confirmed Cases:</h3>
+                            <h4>Total Confirmed Cases:</h4>
                             <h4>{selectedCountryConfirmed.toLocaleString()}</h4>
                         </div>
                         <div className="col-md-4"></div>
@@ -38,7 +38,7 @@ function Rightcolumn({selectedCountryName, selectedCountryConfirmed, selectedCou
                     <div className="row">
                         <div className="col-md-4"></div>
                         <div className="col-md-4 block country-block recovered-cases">
-                            <h3>Total Recovered:</h3>
+                            <h4>Total Recovered:</h4>
                             <h4>{selectedCountryRecovered.toLocaleString()}</h4>
                         </div>
                         <div className="col-md-4"></div>
@@ -47,7 +47,7 @@ function Rightcolumn({selectedCountryName, selectedCountryConfirmed, selectedCou
                     <div className="row">
                         <div className="col-md-4"></div>
                         <div className="col-md-4 block country-block death-cases">
-                            <h3>Total Deaths:</h3>
+                            <h4>Total Deaths:</h4>
                             <h4>{selectedCountryDeaths.toLocaleString()}</h4>
                         </div>
                         <div className="col-md-4"></div>

@@ -25,7 +25,7 @@ function Rightcolumn({selectedCountryName, selectedCountryConfirmed, selectedCou
     // JSX
     return(
             <div className="col-md-7 right-col-countrypicker country-picker">
-                {selectedCountryName !== '' && <h4>Current Stats for {selectedCountryName}</h4>}
+                {selectedCountryName !== '' && <h2>Current Stats for {selectedCountryName}</h2>}
                     <div className="row">
                         <div className="col-md-4"></div>
                         <div className="col-md-4 block country-block confirmed-cases">

@@ -19,7 +19,7 @@ function Footer() {
         
             <div className="row Footer">
                 <div className="col-sm-12">
-                    <h1>Kelly Chin | Web Developer | NSCC</h1>
+                    <h1>Kelly Chin | Web Developer | API - https://covid19api.com/</h1>
                 </div>
             </div>
      
